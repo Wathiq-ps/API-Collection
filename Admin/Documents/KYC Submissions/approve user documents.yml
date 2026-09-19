@@ -1,0 +1,33 @@
+info:
+  name: approve user documents
+  type: http
+  seq: 3
+  tags:
+    - Wathiq/Admin/Documents/kyc submissions
+
+http:
+  method: POST
+  url: "{{URL}}/api/v1/admin/kyc/documents/29bde716-095b-4799-9853-cc2b25cd4e26/approve"
+  auth:
+    type: bearer
+    token: "{{access_token_admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/admin/kyc/documents/29bde716-095b-4799-9853-cc2b25cd4e26/approve"
+      method: POST
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

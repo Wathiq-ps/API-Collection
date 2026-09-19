@@ -1,0 +1,45 @@
+info:
+  name: Publish Property
+  type: http
+  seq: 3
+  tags:
+    - Wathiq/User/Properties/Owner
+
+http:
+  method: POST
+  url: "{{URL}}/api/v1/properties/c741a85d-f795-4b99-938c-597a058a51e6/publish"
+  body:
+    type: multipart-form
+    data:
+      - name: _method
+        type: text
+        value: PATCH
+  auth:
+    type: bearer
+    token: "{{access_token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/properties/c741a85d-f795-4b99-938c-597a058a51e6/publish"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: _method
+            type: text
+            value: PATCH
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

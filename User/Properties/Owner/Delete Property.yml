@@ -1,0 +1,33 @@
+info:
+  name: Delete Property
+  type: http
+  seq: 5
+  tags:
+    - Wathiq/User/Properties/Owner
+
+http:
+  method: DELETE
+  url: "{{URL}}/api/v1/properties/fffccb16-9995-4fde-b308-e9d79ff8674a"
+  auth:
+    type: bearer
+    token: "{{access_token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/properties/fffccb16-9995-4fde-b308-e9d79ff8674a"
+      method: DELETE
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

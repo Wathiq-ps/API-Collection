@@ -1,0 +1,45 @@
+info:
+  name: verify
+  type: http
+  seq: 1
+  tags:
+    - Wathiq/Auth
+
+http:
+  method: POST
+  url: "{{URL}}/api/v1/auth/otp/verify"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "albaraawork3@gmail.com",
+        "code": "745989"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/auth/otp/verify"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "email": "albaraawork3@gmail.com",
+            "code": "745989"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

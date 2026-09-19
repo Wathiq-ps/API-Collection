@@ -1,0 +1,63 @@
+info:
+  name: Update User Profile
+  type: http
+  seq: 1
+  tags:
+    - Wathiq/User/Profile
+
+http:
+  method: POST
+  url: "{{URL}}/api/v1/profile"
+  body:
+    type: multipart-form
+    data:
+      - name: _method
+        type: text
+        value: PATCH
+      - name: name
+        type: text
+        value: ""
+      - name: nationality
+        type: text
+        value: ""
+      - name: signature_image
+        type: text
+        value: ""
+  auth:
+    type: bearer
+    token: "{{access_token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/profile"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: _method
+            type: text
+            value: PATCH
+          - name: name
+            type: text
+            value: ""
+          - name: nationality
+            type: text
+            value: ""
+          - name: signature_image
+            type: text
+            value: ""
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

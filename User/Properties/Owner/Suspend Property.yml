@@ -1,0 +1,37 @@
+info:
+  name: Suspend Property
+  type: http
+  seq: 6
+  tags:
+    - Wathiq/User/Properties/Owner
+
+http:
+  method: GET
+  url: "{{URL}}/api/v1/{proerty_id}/suspend"
+  auth:
+    type: bearer
+    token: "{{access_token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/:id/suspend"
+      method: GET
+      params:
+        - name: id
+          value: ""
+          type: path
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

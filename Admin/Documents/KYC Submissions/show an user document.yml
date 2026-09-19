@@ -1,0 +1,33 @@
+info:
+  name: show an user document
+  type: http
+  seq: 4
+  tags:
+    - Wathiq/Admin/Documents/kyc submissions
+
+http:
+  method: GET
+  url: "{{URL}}/api/v1/admin/kyc/documents/904749d1-7fdc-43e7-8884-f394b3a72e9f/image/front"
+  auth:
+    type: bearer
+    token: "{{access_token_admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/admin/kyc/documents/904749d1-7fdc-43e7-8884-f394b3a72e9f/image/front"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

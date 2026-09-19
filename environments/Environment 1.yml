@@ -1,0 +1,14 @@
+name: Environment 1
+variables:
+  - name: URL
+    value: https://wathiq-back.up.railway.app
+    description: ""
+  - name: url
+    value: http://127.0.0.1:8000
+    description: ""
+  - name: access_token_admin
+    value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3dhdGhpcS1iYWNrLnVwLnJhaWx3YXkuYXBwIiwic3ViIjoiYTc2Njk2NmUtMzVlYi00Y2VjLWIwY2QtODk1MzgzNjgxZjg1IiwiaWF0IjoxNzg5NjUxMTQ0LCJleHAiOjkxNzg5NjUxMTQ0fQ.TabVtySbh81iWPkXXflG68BHqTPpF2RIs1bn8_7-s8A
+    description: ""
+  - name: access_token_user
+    value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3dhdGhpcS1iYWNrLnVwLnJhaWx3YXkuYXBwIiwic3ViIjoiM2Q5YmU1ODItMjkyZC00YzRjLWE1ZWYtNGUyNDlkZDY0OTQ1IiwiaWF0IjoxNzg5NjUxMTYyLCJleHAiOjkxNzg5NjUxMTYyfQ.F1UUKhNKu8u4hOvV2JqTjtMrCC2cM-yMlbMVXPDcXd4
+    description: ""

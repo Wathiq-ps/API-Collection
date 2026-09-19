@@ -1,0 +1,45 @@
+info:
+  name: reject user documents
+  type: http
+  seq: 5
+  tags:
+    - Wathiq/Admin/Documents/kyc submissions
+
+http:
+  method: POST
+  url: "{{URL}}/api/v1/admin/kyc/documents/904749d1-7fdc-43e7-8884-f394b3a72e9f/reject"
+  body:
+    type: json
+    data: |-
+      {
+        "reason": "beacuse u r good"
+      }
+  auth:
+    type: bearer
+    token: "{{access_token_admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/admin/kyc/documents/904749d1-7fdc-43e7-8884-f394b3a72e9f/reject"
+      method: POST
+      body:
+        type: json
+        data: |-
+          {
+            "reason": "beacuse u r good"
+          }
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

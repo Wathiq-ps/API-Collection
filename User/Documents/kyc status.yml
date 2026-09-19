@@ -1,0 +1,33 @@
+info:
+  name: kyc status
+  type: http
+  seq: 1
+  tags:
+    - Wathiq/User/Documents
+
+http:
+  method: GET
+  url: "{{URL}}/api/v1/kyc/status"
+  auth:
+    type: bearer
+    token: "{{access_token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/kyc/status"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

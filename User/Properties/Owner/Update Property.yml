@@ -1,0 +1,147 @@
+info:
+  name: Update Property
+  type: http
+  seq: 2
+  tags:
+    - Wathiq/User/Properties/Owner
+
+http:
+  method: POST
+  url: "{{URL}}/api/v1/properties/a39b3b81-5de6-432b-93f6-941623254111"
+  body:
+    type: multipart-form
+    data:
+      - name: _method
+        type: text
+        value: PATCH
+      - name: listing_type
+        type: text
+        value: sale
+      - name: type
+        type: text
+        value: house
+      - name: city
+        type: text
+        value: gaza
+      - name: district
+        type: text
+        value: ALBahar
+      - name: building_number
+        type: text
+        value: "5456"
+      - name: latitude
+        type: text
+        value: "34.452182"
+      - name: longitude
+        type: text
+        value: "31.517012"
+      - name: area_sqm
+        type: text
+        value: "500"
+      - name: price
+        type: text
+        value: "25566"
+      - name: price_currency
+        type: text
+        value: JOD
+      - name: rooms
+        type: text
+        value: "3"
+      - name: bathrooms
+        type: text
+        value: "4"
+      - name: features[0]
+        type: text
+        value: parking
+      - name: features[1]
+        type: text
+        value: garden
+      - name: features[2]
+        type: text
+        value: water
+      - name: is_furnished
+        type: text
+        value: "0"
+      - name: description
+        type: text
+        value: this is for test
+  auth:
+    type: bearer
+    token: "{{access_token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/properties/a39b3b81-5de6-432b-93f6-941623254111"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: _method
+            type: text
+            value: PATCH
+          - name: listing_type
+            type: text
+            value: sale
+          - name: type
+            type: text
+            value: house
+          - name: city
+            type: text
+            value: gaza
+          - name: district
+            type: text
+            value: ALBahar
+          - name: building_number
+            type: text
+            value: "5456"
+          - name: latitude
+            type: text
+            value: "34.452182"
+          - name: longitude
+            type: text
+            value: "31.517012"
+          - name: area_sqm
+            type: text
+            value: "500"
+          - name: price
+            type: text
+            value: "25566"
+          - name: price_currency
+            type: text
+            value: JOD
+          - name: rooms
+            type: text
+            value: "3"
+          - name: bathrooms
+            type: text
+            value: "4"
+          - name: features[0]
+            type: text
+            value: parking
+          - name: features[1]
+            type: text
+            value: garden
+          - name: features[2]
+            type: text
+            value: water
+          - name: is_furnished
+            type: text
+            value: "0"
+          - name: description
+            type: text
+            value: this is for test
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

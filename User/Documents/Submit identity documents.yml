@@ -1,0 +1,51 @@
+info:
+  name: Submit identity documents
+  type: http
+  seq: 2
+  tags:
+    - Wathiq/User/Documents
+
+http:
+  method: POST
+  url: "{{URL}}/api/v1/kyc/documents"
+  body:
+    type: multipart-form
+    data:
+      - name: front_image
+        type: text
+        value: ""
+      - name: selfie_image
+        type: text
+        value: ""
+  auth:
+    type: bearer
+    token: "{{access_token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/kyc/documents"
+      method: POST
+      body:
+        type: multipart-form
+        data:
+          - name: front_image
+            type: text
+            value: ""
+          - name: selfie_image
+            type: text
+            value: ""
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

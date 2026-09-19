@@ -1,0 +1,33 @@
+info:
+  name: get all documents thats need Aprove or reject
+  type: http
+  seq: 1
+  tags:
+    - Wathiq/Admin/Documents/kyc submissions
+
+http:
+  method: GET
+  url: "{{URL}}/api/v1/admin/kyc/documents"
+  auth:
+    type: bearer
+    token: "{{access_token_admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/admin/kyc/documents"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

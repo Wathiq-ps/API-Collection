@@ -1,0 +1,33 @@
+info:
+  name: List all my properties
+  type: http
+  seq: 4
+  tags:
+    - Wathiq/User/Properties/Owner
+
+http:
+  method: GET
+  url: "{{URL}}/api/v1/properties/my-properties"
+  auth:
+    type: bearer
+    token: "{{access_token_user}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+examples:
+  - name: 200 Response
+    description: Successful response
+    request:
+      url: "{{baseUrl}}/api/v1/properties/my-properties"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      body:
+        type: text
+        data: ""

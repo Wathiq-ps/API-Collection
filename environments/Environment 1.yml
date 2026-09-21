@@ -12,3 +12,6 @@ variables:
   - name: access_token_user
     value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3dhdGhpcS1iYWNrLnVwLnJhaWx3YXkuYXBwIiwic3ViIjoiM2Q5YmU1ODItMjkyZC00YzRjLWE1ZWYtNGUyNDlkZDY0OTQ1IiwiaWF0IjoxNzg5NjUxMTYyLCJleHAiOjkxNzg5NjUxMTYyfQ.F1UUKhNKu8u4hOvV2JqTjtMrCC2cM-yMlbMVXPDcXd4
     description: ""
+  - name: local_user_token
+    value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAiLCJzdWIiOiJjZDczODIzYi1lZTVhLTQxZWMtOTc2ZC1mMzk1NWIwNTdhNTgiLCJpYXQiOjE3ODk5ODMxNjEsImV4cCI6MTA3ODk5ODMxNjF9.8y1aWQ1J4jkStaXfpwTdru24-9y1hnXkxlus9CNnQJI
+    description: ""

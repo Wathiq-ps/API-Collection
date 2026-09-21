@@ -1,0 +1,35 @@
+info:
+  name: Send Request (Rent or Buy)
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/v1/properties/23cab6a0-f721-4814-8083-27a1735c40f0/requests"
+  body:
+    type: multipart-form
+    data:
+      - name: message
+        type: text
+        value: ""
+        description: "not require "
+      - name: term_start
+        type: text
+        value: 21-09-2026
+        contentType: date
+        description: required if the property for rent
+      - name: term_end
+        type: text
+        value: 30-11-2026
+        contentType: date
+        description: required if the property for rent
+  auth:
+    type: bearer
+    token: "{{local_user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,46 @@
+info:
+  name: Upload License
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/v1/lawyer/credentials"
+  body:
+    type: multipart-form
+    data:
+      - name: license_number
+        type: text
+        value: "15656891"
+        contentType: date
+        description: dd-mm-yyyy
+      - name: bar_association
+        type: text
+        value: palestine
+      - name: issued_at
+        type: text
+        value: 23-09-2026
+      - name: expires_at
+        type: text
+        value: ""
+        description: "optional "
+      - name: document
+        type: file
+        value:
+          - /mnt/sda5/Important/Me/me-small.jpg
+        contentType: image/jpeg
+  auth:
+    type: bearer
+    token: "{{lawyer_token_local}}"
+
+runtime:
+  variables:
+    - name: lawyer_token_local
+      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAiLCJzdWIiOiJiOGFjODQzMS03ZTlmLTQ0ZWEtODZjMy01MGZhN2I2ZmEwNDciLCJpYXQiOjE3OTAxNjU1MDIsImV4cCI6MTA3OTAxNjU1MDJ9.g20cGeJoVOqq43YSlgMo7hMWaKqYAAdyqaq3XSxg1e8
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

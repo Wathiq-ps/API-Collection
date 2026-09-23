@@ -16,13 +16,21 @@ http:
         value: PATCH
       - name: name
         type: text
-        value: ""
+        value: Wathiq user
       - name: nationality
         type: text
-        value: ""
+        value: Palestinian
       - name: signature_image
+        type: file
+        value:
+          - /mnt/sda5/Important/Me/WhatsApp Image 2026-02-11 at 11.04.44 AM.jpeg
+        contentType: image/jpeg
+      - name: document_type
         type: text
-        value: ""
+        value: id
+      - name: document_number
+        type: text
+        value: "408086577"
   auth:
     type: bearer
     token: "{{access_token_user}}"

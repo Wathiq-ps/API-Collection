@@ -7,7 +7,7 @@ info:
 
 http:
   method: POST
-  url: "{{URL}}/api/v1/admin/kyc/documents/29bde716-095b-4799-9853-cc2b25cd4e26/approve"
+  url: "{{URL}}/api/v1/admin/kyc/documents/15a670c2-6afc-4a77-b924-5eaa9f797575/approve"
   auth:
     type: bearer
     token: "{{access_token_admin}}"

@@ -15,3 +15,6 @@ variables:
   - name: local_user_token
     value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAiLCJzdWIiOiJjZDczODIzYi1lZTVhLTQxZWMtOTc2ZC1mMzk1NWIwNTdhNTgiLCJpYXQiOjE3ODk5ODMxNjEsImV4cCI6MTA3ODk5ODMxNjF9.8y1aWQ1J4jkStaXfpwTdru24-9y1hnXkxlus9CNnQJI
     description: ""
+  - name: lawyer_token_local
+    value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAiLCJzdWIiOiJiOGFjODQzMS03ZTlmLTQ0ZWEtODZjMy01MGZhN2I2ZmEwNDciLCJpYXQiOjE3OTAxNjU1MDIsImV4cCI6MTA3OTAxNjU1MDJ9.g20cGeJoVOqq43YSlgMo7hMWaKqYAAdyqaq3XSxg1e8
+    description: ""

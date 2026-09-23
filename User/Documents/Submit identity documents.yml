@@ -12,11 +12,15 @@ http:
     type: multipart-form
     data:
       - name: front_image
-        type: text
-        value: ""
+        type: file
+        value:
+          - /mnt/sda5/Important/Me/me-small.jpg
+        contentType: image/jpeg
       - name: selfie_image
-        type: text
-        value: ""
+        type: file
+        value:
+          - /mnt/sda5/Important/Me/WhatsApp Image 2026-02-11 at 11.04.43 AM (1).jpeg
+        contentType: image/jpeg
   auth:
     type: bearer
     token: "{{access_token_user}}"

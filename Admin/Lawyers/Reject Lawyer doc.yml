@@ -1,0 +1,25 @@
+info:
+  name: Reject Lawyer doc
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{URL}}/api/v1/admin/lawyers/{lawyerCredential}/reject"
+  body:
+    type: multipart-form
+    data:
+      - name: reason
+        type: text
+        value: ""
+        description: "require "
+  auth:
+    type: bearer
+    token: "{{access_token_admin}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

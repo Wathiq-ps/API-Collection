@@ -1,0 +1,18 @@
+info:
+  name: Show Single Property
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/v1/admin/properties/b30f0154-7ae8-4c81-bcfa-abb6b1ebd280"
+  auth:
+    type: bearer
+    token: "{{admin_token_local}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,18 @@
+info:
+  name: Approve Doc
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/api/v1/admin/properties/documents/83b981b5-02d7-422d-a96b-976b5a9dc79d/approve"
+  auth:
+    type: bearer
+    token: "{{admin_token_local}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

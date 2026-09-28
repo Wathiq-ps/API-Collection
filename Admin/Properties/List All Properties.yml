@@ -1,0 +1,68 @@
+info:
+  name: List All Properties
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/v1/admin/properties"
+  params:
+    - name: status
+      value: published
+      type: query
+      description: |-
+        optinal
+
+        'draft',
+        'pending_verification',
+        'published',
+        'under_contract',
+        'sold',
+        'rented',
+        'rejected'
+      disabled: true
+    - name: city
+      value: ""
+      type: query
+      description: optinal
+      disabled: true
+    - name: district
+      value: ""
+      type: query
+      description: optinal
+      disabled: true
+    - name: type
+      value: ""
+      type: query
+      description: |-
+        optinal
+
+        'apartment', 
+        'house', 
+        'villa', 
+        'land', 
+        'office', 
+        'shop', 
+        'warehouse', 
+        'building', 
+        'farm'
+      disabled: true
+    - name: listing_type
+      value: rent
+      type: query
+      description: |-
+        optinal
+
+        rent
+        sale
+      disabled: true
+  auth:
+    type: bearer
+    token: "{{admin_token_local}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

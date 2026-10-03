@@ -1,0 +1,18 @@
+info:
+  name: Approve Contract
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/v1/contracts/1820a62d-740e-460e-b183-f9bfd4e04790/party-approval"
+  auth:
+    type: bearer
+    token: "{{local_user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

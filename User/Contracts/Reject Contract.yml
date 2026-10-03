@@ -1,0 +1,24 @@
+info:
+  name: Reject Contract
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/v1/contracts/1820a62d-740e-460e-b183-f9bfd4e04790/party-rejection"
+  body:
+    type: multipart-form
+    data:
+      - name: note
+        type: text
+        value: test
+  auth:
+    type: bearer
+    token: "{{local_user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

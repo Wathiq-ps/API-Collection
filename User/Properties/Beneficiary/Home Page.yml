@@ -7,7 +7,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/v1/properties/home"
+  url: "{{URL}}/api/v1/properties/home"
   auth: inherit
 
 runtime:

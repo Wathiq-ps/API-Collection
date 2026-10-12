@@ -5,10 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/v1/admin/properties/documents"
+  url: "{{URL}}/api/v1/admin/properties/documents"
   auth:
     type: bearer
-    token: "{{admin_token_local}}"
+    token: "{{access_token_admin}}"
 
 settings:
   encodeUrl: true

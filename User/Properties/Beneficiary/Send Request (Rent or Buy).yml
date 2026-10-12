@@ -5,27 +5,29 @@ info:
 
 http:
   method: POST
-  url: "{{url}}/api/v1/properties/23cab6a0-f721-4814-8083-27a1735c40f0/requests"
+  url: "{{URL}}/api/v1/properties/530c4c97-0aca-45f2-9033-417a476f56f2/requests"
   body:
     type: multipart-form
     data:
       - name: message
         type: text
-        value: ""
+        value: sdfsdf
         description: "not require "
       - name: term_start
         type: text
-        value: 21-09-2026
+        value: 10-10-2026
         contentType: date
         description: required if the property for rent
+        disabled: true
       - name: term_end
         type: text
         value: 30-11-2026
         contentType: date
         description: required if the property for rent
+        disabled: true
   auth:
     type: bearer
-    token: "{{local_user_token}}"
+    token: "{{access_token_user}}"
 
 settings:
   encodeUrl: true

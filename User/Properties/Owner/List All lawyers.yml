@@ -1,0 +1,18 @@
+info:
+  name: List All lawyers
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{URL}}/api/v1/properties/requests/{propertyRequest}/lawyers"
+  auth:
+    type: bearer
+    token: "{{local_user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

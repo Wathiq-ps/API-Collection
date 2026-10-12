@@ -5,10 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/v1/properties/my-requests"
+  url: "{{URL}}/api/v1/properties/my-requests"
   auth:
     type: bearer
-    token: "{{local_user_token}}"
+    token: "{{access_token_user}}"
 
 settings:
   encodeUrl: true

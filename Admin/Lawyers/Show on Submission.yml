@@ -5,10 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{URL}}/api/v1/admin/lawyers/b8ac8431-7e9f-44ea-86c3-50fa7b6fa047"
+  url: "{{URL}}/api/v1/admin/lawyers/01a0c4aa-9f6f-7e1b-ac47-e793acd46626"
   auth:
     type: bearer
-    token: "{{admin_token_local}}"
+    token: "{{access_token_admin}}"
 
 settings:
   encodeUrl: true

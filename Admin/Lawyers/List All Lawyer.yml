@@ -12,7 +12,7 @@ http:
       type: query
   auth:
     type: bearer
-    token: "{{admin_token_local}}"
+    token: "{{access_token_admin}}"
 
 settings:
   encodeUrl: true

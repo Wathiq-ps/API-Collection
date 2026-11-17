@@ -6,7 +6,8 @@ info:
 http:
   method: POST
   url: "{{URL}}/api/v1/auth/logout"
-  auth: inherit
+  auth:
+    type: bearer
 
 settings:
   encodeUrl: true

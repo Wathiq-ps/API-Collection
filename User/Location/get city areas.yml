@@ -1,0 +1,24 @@
+info:
+  name: get city areas
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/api/v1/locations/areas?city_id=01a1e94c-f4ea-7148-893c-3836ced0d4ae&search=تل الهو"
+  params:
+    - name: city_id
+      value: 01a1e94c-f4ea-7148-893c-3836ced0d4ae
+      type: query
+      description: req
+    - name: search
+      value: تل الهو
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,20 @@
+info:
+  name: get all countries
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{url}}/api/v1/locations/countries?search=فلسطين"
+  params:
+    - name: search
+      value: فلسطين
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,24 @@
+info:
+  name: get cities for a country
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{url}}/api/v1/locations/cities?country_id=01a19281-c2d8-7ff7-987a-da5d1088484b&search=غزة"
+  params:
+    - name: country_id
+      value: 01a19281-c2d8-7ff7-987a-da5d1088484b
+      type: query
+      description: req
+    - name: search
+      value: غزة
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

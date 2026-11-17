@@ -65,6 +65,12 @@ http:
       - name: description
         type: text
         value: this is for test
+      - name: photos[0]
+        type: text
+        value: ""
+      - name: photos[1]
+        type: text
+        value: ""
   auth:
     type: bearer
     token: "{{access_token_user}}"
